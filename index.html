@@ -173,6 +173,7 @@ section.block{padding:88px 0}
 .role .pip{flex:none;width:10px;height:10px;border-radius:50%;background:var(--amber);margin-top:9px}
 .role b{display:block;color:var(--green-800);font-weight:700}
 .role span{color:#3c4a43}
+.role .when{display:block;font-style:normal;font-size:13px;color:var(--muted);margin-top:2px}
 .role.hl{border-color:var(--amber);background:linear-gradient(135deg,#fff, var(--amber-100))}
 @keyframes rise{from{opacity:0;transform:translateY(10px)}}
 @media (max-width:700px){.panel{grid-template-columns:1fr}}
@@ -287,7 +288,7 @@ footer{background:var(--green-900);color:#b8cdbf;padding:56px 0 28px;margin-top:
       <p class="name">Dr Amit Kumar</p>
       <p class="meta">Senior Member, IEEE &nbsp;·&nbsp; Hyderabad Section &nbsp;·&nbsp; Member No. 90732008</p>
       <div class="vstatus" id="vstatus" role="status"><span class="vdot" aria-hidden="true"></span><span><b id="vs-title">Voting: 19 Nov – 8 Dec 2026</b><small id="vs-sub">On the IEEE vTools Voting platform</small></span></div>
-      <p class="lead">From founding chapters in Hyderabad to chairing IEEE-level integrity committees. Now on the final slate, thanks to you. Here’s how to vote.</p>
+      <p class="lead">From Hyderabad Section webmaster to chairing IEEE-wide conference integrity committees. Now on the final slate, thanks to you. Here’s how to vote.</p>
       <div class="btns">
         <a class="btn btn-primary" href="#vote">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
@@ -323,10 +324,10 @@ footer{background:var(--green-900);color:#b8cdbf;padding:56px 0 28px;margin-top:
 
 <div class="wrap">
   <div class="stats reveal" role="list">
-    <div class="stat" role="listitem"><div class="n" data-count="8">0</div><p>IEEE-level committee roles, including two committee chairs</p></div>
-    <div class="stat" role="listitem"><div class="n" data-count="4">0</div><p>Awards from IEEE MGA, Region 10 and India Council</p></div>
-    <div class="stat" role="listitem"><div class="n" data-count="3">0</div><p>Flagship conferences chaired — INDICON, R10 HTC, R10 SC Symposium</p></div>
-    <div class="stat" role="listitem"><div class="n" data-count="2">0</div><p>Society chapters founded in Hyderabad Section</p></div>
+    <div class="stat" role="listitem"><div class="n" data-count="16" data-suffix="+">0</div><p>Years of IEEE volunteering, from Section webmaster in 2010 onward</p></div>
+    <div class="stat" role="listitem"><div class="n" data-count="3">0</div><p>IEEE-wide committees chaired — TPIC, Conference Tools, Conference Organization Integrity</p></div>
+    <div class="stat" role="listitem"><div class="n" data-count="3">0</div><p>Flagship conferences chaired — INDICON 2024, R10 HTC 2022, R10 SC Symposium 2024</p></div>
+    <div class="stat" role="listitem"><div class="n" data-count="4">0</div><p>Volunteer awards from IEEE MGA, Region 10 and India Council</p></div>
   </div>
 </div>
 
@@ -370,42 +371,59 @@ footer{background:var(--green-900);color:#b8cdbf;padding:56px 0 28px;margin-top:
 <section class="block alt" id="record" aria-labelledby="record-h">
   <div class="wrap">
     <div class="head reveal">
-      <span class="eyebrow">Positions held</span>
-      <h2 id="record-h">A record of service at every level of IEEE.</h2>
-      <p>From Section to Region 10 to IEEE-wide committees — the work of building chapters, running conferences and protecting their integrity.</p>
+      <span class="eyebrow">Positions held · since 2010</span>
+      <h2 id="record-h">From Section webmaster to IEEE-wide committee chair.</h2>
+      <p>Every office in the Hyderabad Section, then India Council, Region 10 and IEEE-wide committees — building chapters, running conferences and protecting their integrity.</p>
     </div>
 
     <div class="tabs" role="tablist" aria-label="Positions by level">
-      <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="true">IEEE Level<span class="c">8</span></button>
-      <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">IEEE India Council<span class="c">5</span></button>
-      <button class="tab" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1">Region 10, Section &amp; Societies<span class="c">7</span></button>
+      <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="true">IEEE-wide · current<span class="c">8</span></button>
+      <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">IEEE-wide · past<span class="c">9</span></button>
+      <button class="tab" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1">Region 10 &amp; India Council<span class="c">8</span></button>
+      <button class="tab" role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1">Hyderabad Section<span class="c">9</span></button>
     </div>
 
     <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1">
-      <div class="role hl"><span class="pip"></span><div><b>Chair</b><span>Technical Program Integrity Committee</span></div></div>
-      <div class="role hl"><span class="pip"></span><div><b>Chair</b><span>Conference Organization Integrity Committee</span></div></div>
-      <div class="role"><span class="pip"></span><div><b>Member</b><span>IEEE MGA Nominations &amp; Appointments Committee</span></div></div>
-      <div class="role"><span class="pip"></span><div><b>Member</b><span>Conference Quality Committee</span></div></div>
-      <div class="role"><span class="pip"></span><div><b>Voting Member</b><span>Conference Publications Committee</span></div></div>
-      <div class="role"><span class="pip"></span><div><b>Member</b><span>IEEE Conferences Committee</span></div></div>
-      <div class="role"><span class="pip"></span><div><b>Member</b><span>IEEE New Initiatives Committee</span></div></div>
-      <div class="role"><span class="pip"></span><div><b>Member</b><span>Eric Herz Outstanding Staff Member Award Committee</span></div></div>
+      <div class="role hl"><span class="pip"></span><div><b>Chair</b><span>Technical Program Integrity Committee (TPIC), IEEE Conferences Committee</span><em class="when">2025 – present</em></div></div>
+      <div class="role hl"><span class="pip"></span><div><b>Chair</b><span>Conference Tools Committee, IEEE Conferences Committee</span><em class="when">2026 – present</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Member</b><span>IEEE Conferences Committee · Technical Activities Board appointment</span><em class="when">2026 – 2027</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Member</b><span>Conference Publications Committee · MGA appointment</span><em class="when">2025 – 2026</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Member, as TPIC Chair</b><span>Conference Quality Committee</span><em class="when">2025 – present</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Member</b><span>Conference Organization Integrity Committee</span><em class="when">2025 – present</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Corresponding Member</b><span>Conference Application Review Committee</span><em class="when">2025 – present</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Member</b><span>Service Awards Committee</span><em class="when">2026 – 2027</em></div></div>
     </div>
     <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
-      <div class="role hl"><span class="pip"></span><div><b>Conference Chair</b><span>IEEE INDICON 2024, the Council’s flagship conference</span></div></div>
-      <div class="role"><span class="pip"></span><div><b>Professional Activities Chair</b><span>IEEE India Council</span></div></div>
-      <div class="role"><span class="pip"></span><div><b>Technical Activities Chair</b><span>IEEE India Council</span></div></div>
-      <div class="role"><span class="pip"></span><div><b>Member</b><span>IEEE India Council Conference Committee</span></div></div>
-      <div class="role"><span class="pip"></span><div><b>Recognised</b><span>India Council Outstanding Volunteer 2020</span></div></div>
+      <div class="role hl"><span class="pip"></span><div><b>Chair</b><span>Conference Organization Integrity Committee, IEEE Conferences Committee</span><em class="when">2023 – 2024</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Member</b><span>Technical Program Integrity Committee</span><em class="when">2023 – 2024</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Member</b><span>Conference Quality Committee</span><em class="when">2023 – 2025</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Member</b><span>Conference Organization Integrity Committee</span><em class="when">2022</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Member</b><span>IEEE New Initiatives Committee</span><em class="when">2024 – 2025</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Member</b><span>Eric Herz Outstanding Staff Member Award Committee</span><em class="when">2023 – 2026</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Member</b><span>MGA Nominations &amp; Appointments Committee</span><em class="when">2020 – 2021</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Member</b><span>MGA Strategic Planning Committee</span><em class="when">2017 – 2018</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Member</b><span>IEEE Corporate Engagement Ad Hoc Committee</span><em class="when">2013</em></div></div>
     </div>
     <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
-      <div class="role hl"><span class="pip"></span><div><b>Chair</b><span>IEEE Region 10 Section Chapter Committee</span></div></div>
-      <div class="role"><span class="pip"></span><div><b>Conference Chair</b><span>IEEE Region 10 HTC 2022</span></div></div>
-      <div class="role"><span class="pip"></span><div><b>Conference Chair</b><span>R10 Section Chapter Symposium 2024</span></div></div>
+      <div class="role hl"><span class="pip"></span><div><b>Chair</b><span>Section &amp; Chapter Committee, IEEE Region 10 (Asia-Pacific)</span><em class="when">2021 – 2024</em></div></div>
+      <div class="role hl"><span class="pip"></span><div><b>Conference Chair</b><span>IEEE INDICON 2024, the India Council’s flagship conference</span><em class="when">2024</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Conference Chair</b><span>2022 IEEE Region 10 Humanitarian Technology Conference (R10 HTC)</span><em class="when">2021 – 2022</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Conference Chair</b><span>2024 IEEE Region 10 Section Chapter Symposium</span><em class="when">2024</em></div></div>
       <div class="role"><span class="pip"></span><div><b>Lead organiser</b><span>R10 Conference Leadership Workshop</span></div></div>
-      <div class="role hl"><span class="pip"></span><div><b>Chair</b><span>IEEE Hyderabad Section, 2022–23</span></div></div>
-      <div class="role"><span class="pip"></span><div><b>Founding Chapter Chair</b><span>IEEE Sensors Council Chapter, Hyderabad Section</span></div></div>
-      <div class="role"><span class="pip"></span><div><b>Founding Chapter Chair</b><span>IEEE CIS Chapter, Hyderabad Section</span></div></div>
+      <div class="role"><span class="pip"></span><div><b>Professional Activities</b><span>IEEE India Council</span><em class="when">2015 – 2016</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Technical Activities</b><span>IEEE India Council</span><em class="when">2015 – 2016</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Member</b><span>IEEE India Council Conference Committee</span></div></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
+      <div class="role hl"><span class="pip"></span><div><b>Chair</b><span>IEEE Hyderabad Section</span><em class="when">2020</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Vice Chair</b><span>IEEE Hyderabad Section</span><em class="when">2018 – 2019</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Treasurer</b><span>IEEE Hyderabad Section</span><em class="when">2013 – 2016</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Secretary</b><span>IEEE Hyderabad Section</span><em class="when">2011 – 2013</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Conferences Committee Chair</b><span>IEEE Hyderabad Section</span><em class="when">2018 – 2019 · 2023 – 2024</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>India Council Representative</b><span>IEEE Hyderabad Section</span><em class="when">2019 · 2022 – 2023</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Founding Chapter Chair</b><span>IEEE Sensors Council Chapter, Hyderabad Section</span><em class="when">2021 – 2023</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Founding Chapter Chair</b><span>IEEE Computational Intelligence Society Chapter, Hyderabad Section</span><em class="when">2011 – 2014</em></div></div>
+      <div class="role"><span class="pip"></span><div><b>Webmaster · vTools Coordinator · R&amp;D Policy</b><span>IEEE Hyderabad Section</span><em class="when">2010 – 2013</em></div></div>
     </div>
 
     <div class="awards">
@@ -465,18 +483,21 @@ footer{background:var(--green-900);color:#b8cdbf;padding:56px 0 28px;margin-top:
   <div class="wrap about">
     <div class="about-card reveal">
       <h3>Beyond IEEE</h3>
-      <div class="k">Professional role</div>
-      <p><strong style="color:#fff">Director</strong>, BioAxis DNA Research Centre (P) Ltd</p>
-      <div class="k">Distinction</div>
-      <p>India’s first DNA testing company, established 2006</p>
+      <div class="k">Founder &amp; Director</div>
+      <p>BioAxis DNA Research Centre (P) Ltd, Hyderabad — India’s first private DNA testing company</p>
+      <div class="k">Impact</div>
+      <p><strong style="color:#fff">1,000+</strong> crime investigation officers trained<br><strong style="color:#fff">750+</strong> criminal and non-criminal cases supported</p>
+      <div class="k">Since 2012</div>
+      <p>Genetic predisposition risk studies helping cancer patients</p>
       <div class="k">IEEE grade</div>
       <p>Senior Member · No. 90732008</p>
     </div>
     <div class="about-text reveal">
       <span class="eyebrow">About</span>
-      <h2 id="about-h" style="font-size:clamp(28px,3.8vw,40px);margin:12px 0 16px">An entrepreneur who knows what volunteers need.</h2>
-      <p>Running a pioneering company teaches you that good intentions need structure behind them. That is the approach I have brought to IEEE — whether founding the Sensors Council and CIS chapters in Hyderabad, chairing the Section, leading INDICON 2024, or chairing the IEEE committees that safeguard the integrity of our technical programs and conferences.</p>
-      <p>As Chair-Elect, I want that same discipline working for every member in every Section across India.</p>
+      <h2 id="about-h" style="font-size:clamp(28px,3.8vw,40px);margin:12px 0 16px">Forensic scientist, entrepreneur, engineer — and IEEE volunteer.</h2>
+      <p>I founded BioAxis DNA Research Centre in Hyderabad with a US collaborator, as India’s first private DNA testing company. Our laboratory has supported more than 750 criminal and non-criminal cases, I have trained over 1,000 crime investigation officers, and since 2012 our group has worked on genetic predisposition studies that help cancer patients.</p>
+      <p>In IEEE I started where most volunteers do — as Hyderabad Section webmaster and vTools coordinator — and went on to serve as Secretary, Treasurer, Vice Chair and Chair before taking on India Council, Region 10 and IEEE-wide roles. Along the way I have run conferences, conference leadership programmes, entrepreneurship development workshops, and innovation and internship trainings.</p>
+      <p>As Chair-Elect, I want that experience working for every member in every Section across India.</p>
     </div>
   </div>
 </section>
@@ -571,12 +592,12 @@ footer{background:var(--green-900);color:#b8cdbf;padding:56px 0 28px;margin-top:
 
   // Reveal on scroll + counters
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const count=el=>{const to=+el.dataset.count;if(reduce){el.textContent=to;return}let s=null;
-    const step=t=>{s=s||t;const p=Math.min((t-s)/1100,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step)};
+  const count=el=>{const to=+el.dataset.count;if(reduce){el.textContent=to+(el.dataset.suffix||'');return}let s=null;
+    const step=t=>{s=s||t;const p=Math.min((t-s)/1100,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)))+(p>=1?(el.dataset.suffix||''):'');if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step)};
   if('IntersectionObserver' in window){
     const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('[data-count]').forEach(count);io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
     $$('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4)*80+'ms';io.observe(el)});
-  } else { $$('.reveal').forEach(el=>el.classList.add('in')); $$('[data-count]').forEach(el=>el.textContent=el.dataset.count); }
+  } else { $$('.reveal').forEach(el=>el.classList.add('in')); $('[data-count]').forEach(el=>el.textContent=el.dataset.count+(el.dataset.suffix||'')); }
 
   // Voting status (dates per IEEE India Council slate notice; IST)
   (function(){
