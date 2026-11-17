@@ -269,7 +269,8 @@ footer{background:var(--green-900);color:#b8cdbf;padding:56px 0 28px;margin-top:
   <div class="wrap hero-grid">
     <div>
       <span class="badge"><span class="dot" aria-hidden="true"></span>Nominated by petition</span>
-      <h1>IEEE India Council<br><em>Chair-Elect</em> 2027</h1>
+      <p class="eyebrow" style="margin:22px 0 0;font-size:14px">Candidate for</p>
+      <h1 style="margin-top:8px">IEEE India Council<br><em>Chair-Elect</em> 2027</h1>
       <p class="name">Dr Amit Kumar</p>
       <p class="meta">Senior Member, IEEE &nbsp;·&nbsp; Member No. 90732008</p>
       <p class="lead">From founding chapters in Hyderabad to chairing IEEE-level integrity committees. Now on the slate, thanks to you. Here’s what comes next.</p>
@@ -473,6 +474,7 @@ footer{background:var(--green-900);color:#b8cdbf;padding:56px 0 28px;margin-top:
         <span class="eyebrow" style="color:#e3a33b">Step 3 · Remind a colleague</span>
         <h2 id="share-h" style="margin:12px 0 12px">Turnout decides Council elections.</h2>
         <p>A personal note from you carries more weight than any campaign message. Please forward this page to eligible colleagues in your Section.</p>
+        <p style="font-size:14px;color:#b8cdbf;border-left:3px solid #e3a33b;padding-left:12px;margin-top:18px"><strong style="color:#fff">Please share personally, one to one.</strong> Under IEEE policy, IEEE mailing lists, vTools/e-Notice, and official IEEE Section, Chapter or Council websites, social media pages and groups must not be used to promote a candidate. If you hold an IEEE office, please don’t share in your official capacity.</p>
       </div>
       <div class="share-btns">
         <a class="sbtn" id="sh-wa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>WhatsApp</a>
@@ -514,7 +516,8 @@ footer{background:var(--green-900);color:#b8cdbf;padding:56px 0 28px;margin-top:
         <a href="tel:+919849807824">+91 98498 07824</a>
       </div>
     </div>
-    <p class="disclaimer"><strong>Disclaimer:</strong> This is the personal website of Dr Amit Kumar, a petition candidate for IEEE India Council Chair-Elect 2027. It is not an official website of IEEE, IEEE Region 10 or the IEEE India Council, and nothing on it implies endorsement by IEEE or any IEEE organizational unit. The site is prepared and maintained personally by the candidate without the use of IEEE funds, staff or resources, and does not use the IEEE logo or other IEEE marks. Official election information, including ballots, comes only from the IEEE India Council by email. This site uses no cookies or trackers and does not collect any personal data.</p>
+    <p class="disclaimer"><strong>The opinions expressed herein are the opinions of the author and not necessarily the opinions of IEEE.</strong></p>
+    <p class="disclaimer" style="margin-top:8px"><strong>Disclaimer:</strong> This is the personal website of Dr Amit Kumar, a petition candidate for IEEE India Council Chair-Elect 2027. It is not an official website of IEEE, IEEE Region 10 or the IEEE India Council, and nothing on it implies endorsement by IEEE or any IEEE organizational unit. The site is prepared and maintained personally by the candidate without the use of IEEE funds, staff or resources, and does not use the IEEE logo or other IEEE marks. Official election information, including ballots, comes only from the IEEE India Council by email. This site uses no cookies or trackers and does not collect any personal data.</p>
     <p class="copy">© <span id="yr">2026</span> Dr Amit Kumar. All rights reserved.</p>
   </div>
 </footer>
@@ -565,12 +568,16 @@ footer{background:var(--green-900);color:#b8cdbf;padding:56px 0 28px;margin-top:
   const msg='Dr Amit Kumar is on the IEEE India Council Chair-Elect 2027 slate (nominated by petition). Voting has not opened yet — the India Council will email the ballot to your IEEE-registered address. Please vote when it arrives:';
   $('#sh-wa').href='https://wa.me/?text='+encodeURIComponent(msg+' '+url);
   $('#sh-li').href='https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(url);
-  $('#sh-em').href='mailto:?subject='+encodeURIComponent('IEEE India Council election — please vote when your ballot arrives')+'&body='+encodeURIComponent(msg+'\n\n'+url);
+  const disc='The opinions expressed herein are the opinions of the author and not necessarily the opinions of IEEE.';
+  const policy='Please follow IEEE election policies: do not forward to IEEE mailing lists or official IEEE pages/groups.';
+  const optout="If you'd rather not receive messages like this, just reply and let me know.";
+  $('#sh-wa').href='https://wa.me/?text='+encodeURIComponent(msg+' '+url+'\n\n'+policy+' '+disc);
+  $('#sh-em').href='mailto:?subject='+encodeURIComponent('IEEE India Council election — please vote when your ballot arrives')+'&body='+encodeURIComponent(msg+'\n\n'+url+'\n\n'+optout+'\n'+policy+'\n\n'+disc);
   const toast=t=>{const el=$('#toast');el.textContent=t;el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('show'),2200)};
   const copy=async()=>{try{await navigator.clipboard.writeText(url);toast('Link copied — paste it anywhere')}catch(e){prompt('Copy this link:',url)}};
   $('#sh-cp').addEventListener('click',copy);
   $('#sh-native').addEventListener('click',async()=>{
-    if(navigator.share){try{await navigator.share({title:document.title,text:msg,url})}catch(e){}}
+    if(navigator.share){try{await navigator.share({title:document.title,text:msg+' '+policy+' '+disc,url})}catch(e){}}
     else copy();
   });
 })();
