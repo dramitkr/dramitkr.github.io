@@ -1,0 +1,5 @@
+# Dr Amit Kumar — personal website
+User-agent: *
+Allow: /
+
+Sitemap: https://dramitkr.github.io/sitemap.xml

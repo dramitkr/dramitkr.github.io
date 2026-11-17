@@ -1,0 +1,21 @@
+{
+  "name": "Dr Amit Kumar",
+  "short_name": "Amit Kumar",
+  "description": "Personal website of Dr Amit Kumar",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#faf7f0",
+  "theme_color": "#173a2c",
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

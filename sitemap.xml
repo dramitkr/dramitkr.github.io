@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://dramitkr.github.io/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image><image:loc>https://dramitkr.github.io/assets/amit-kumar.jpg</image:loc><image:title>Dr Amit Kumar</image:title></image:image>
+    <image:image><image:loc>https://dramitkr.github.io/assets/og-card.jpg</image:loc><image:title>Thank you from Dr Amit Kumar, candidate for IEEE India Council Chair-Elect 2027</image:title></image:image>
+    <image:image><image:loc>https://dramitkr.github.io/assets/posters/amit-kumar-whatsapp-status.png</image:loc><image:title>Dr Amit Kumar thank-you and voting poster, WhatsApp status</image:title></image:image>
+    <image:image><image:loc>https://dramitkr.github.io/assets/posters/amit-kumar-thank-you-poster.png</image:loc><image:title>Dr Amit Kumar thank-you and voting poster</image:title></image:image>
+    <image:image><image:loc>https://dramitkr.github.io/assets/posters/amit-kumar-linkedin-facebook.png</image:loc><image:title>Dr Amit Kumar thank-you and voting poster for LinkedIn and Facebook</image:title></image:image>
+  </url>
+</urlset>
