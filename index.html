@@ -140,6 +140,21 @@ header.nav.scrolled{border-color:var(--line);box-shadow:0 4px 20px rgba(15,42,31
 .gi .gb{color:var(--amber-600)}
 @keyframes marquee{to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.track{flex-wrap:wrap;width:auto;justify-content:center;row-gap:6px}.track .dup{display:none}}
+/* ---------- Hero vote card ---------- */
+.herovote{display:block;margin-top:18px;max-width:560px;background:var(--green-800);color:#dfeae3;border-radius:18px;padding:16px 18px;text-decoration:none;box-shadow:0 14px 30px rgba(23,58,44,.22);transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden}
+.herovote::after{content:"";position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(227,163,59,.35),transparent 70%)}
+.herovote:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(23,58,44,.3)}
+.hv-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
+.vstatus-in{display:inline-flex;gap:12px;align-items:center;line-height:1.3}
+.vstatus-in b{display:block;color:#fff;font-size:17px}
+.vstatus-in small{color:#b8cdbf;font-size:13px}
+.hv-tag{background:var(--amber);color:#1b1305;font-weight:700;font-size:14px;padding:8px 14px;border-radius:999px;white-space:nowrap}
+.hv-steps{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,.14);font-size:14px;position:relative;z-index:1}
+.hv-steps span{display:inline-flex;align-items:center;gap:8px}
+.hv-steps i{font:700 13px/1 var(--serif);font-style:normal;width:22px;height:22px;border-radius:50%;background:rgba(227,163,59,.2);color:#e3a33b;display:grid;place-items:center;flex:none}
+@media (max-width:900px){.portrait{width:min(230px,62%)}.portrait .ring{width:80px;height:80px}.float{display:none}}
+@media (max-width:480px){.hv-steps{flex-direction:column;gap:6px}}
+@media (max-width:900px){.greet{min-height:56px;margin-bottom:8px}.hero-grid{gap:20px}}
 /* ---------- How to vote ---------- */
 .links a.navvote{background:var(--amber-100);color:var(--amber-600);font-weight:700}
 .links a.navvote:hover{background:#f6e2bd}
@@ -354,8 +369,15 @@ footer{background:var(--green-900);color:#b8cdbf;padding:56px 0 28px;margin-top:
       <h1 style="margin-top:8px">IEEE India Council<br><em>Chair-Elect</em> 2027</h1>
       <p class="name">Dr Amit Kumar</p>
       <p class="meta">Senior Member, IEEE &nbsp;·&nbsp; Hyderabad Section &nbsp;·&nbsp; Member No. 90732008</p>
-      <div class="vstatus" id="vstatus" role="status"><span class="vdot" aria-hidden="true"></span><span><b id="vs-title">Voting: 19 Nov – 8 Dec 2026</b><small id="vs-sub">On the IEEE vTools Voting platform</small></span></div>
-      <p class="lead">From Hyderabad Section webmaster to chairing IEEE-wide conference integrity committees. Now on the final slate, thanks to you. Here’s how to vote.</p>
+      <a class="herovote" href="#vote" aria-label="How to vote: voting runs 19 November to 8 December 2026 on IEEE vTools Voting">
+        <span class="hv-top"><span class="vstatus-in" id="vstatus" role="status"><span class="vdot" aria-hidden="true"></span><span><b id="vs-title">Voting: 19 Nov – 8 Dec 2026</b><small id="vs-sub">On the IEEE vTools Voting platform</small></span></span><span class="hv-tag">How to vote →</span></span>
+        <span class="hv-steps" aria-hidden="true">
+          <span><i>1</i>Watch your inbox for the IEEE vTools ballot</span>
+          <span><i>2</i>Vote the same day</span>
+          <span><i>3</i>Remind a colleague</span>
+        </span>
+      </a>
+      <p class="lead">From Hyderabad Section webmaster to chairing IEEE-wide conference integrity committees. Now on the final slate, thanks to you.</p>
       <div class="btns">
         <a class="btn btn-amber btn-big" href="#vote">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
@@ -698,7 +720,7 @@ footer{background:var(--green-900);color:#b8cdbf;padding:56px 0 28px;margin-top:
     const src=$('#vstatus'), t=$('#vs-title').textContent, sub=$('#vs-sub').textContent, open=src.classList.contains('open');
     $('#vz-title').textContent=t; $('#vz-sub').textContent=sub; $('#vz-live').classList.toggle('open',open);
     $('#vb-title').textContent=t.replace(' 2026',''); $('#vb-sub').textContent=open?'Check your inbox for the ballot':'On IEEE vTools Voting'; $('#votebar').classList.toggle('open',open);
-    const bar=$('#votebar'), hero=$('#top'), vote=$('#vote'); let heroIn=true, voteIn=false;
+    const bar=$('#votebar'), hero=document.querySelector('.herovote'), vote=$('#vote'); let heroIn=true, voteIn=false;
     const upd=()=>bar.classList.toggle('show',!heroIn&&!voteIn);
     if('IntersectionObserver' in window){
       new IntersectionObserver(e=>{heroIn=e[0].isIntersecting;upd()},{threshold:0}).observe(hero);
