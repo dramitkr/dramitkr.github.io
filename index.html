@@ -37,7 +37,7 @@
 /* latin-ext */@font-face {font-family: 'Fraunces';font-style: italic;font-weight: 600;font-display: swap;src: url(assets/fonts/f0.woff2) format('woff2');unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}/* latin */@font-face {font-family: 'Fraunces';font-style: italic;font-weight: 600;font-display: swap;src: url(assets/fonts/f1.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}/* latin-ext */@font-face {font-family: 'Fraunces';font-style: normal;font-weight: 500 700;font-display: swap;src: url(assets/fonts/f2.woff2) format('woff2');unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}/* latin */@font-face {font-family: 'Fraunces';font-style: normal;font-weight: 500 700;font-display: swap;src: url(assets/fonts/f3.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}/* latin-ext */@font-face {font-family: 'Inter';font-style: normal;font-weight: 400 700;font-display: swap;src: url(assets/fonts/f4.woff2) format('woff2');unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}/* latin */@font-face {font-family: 'Inter';font-style: normal;font-weight: 400 700;font-display: swap;src: url(assets/fonts/f5.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
 :root{
   --green-900:#0f2a1f; --green-800:#173a2c; --green-700:#1f4c3a; --green-100:#e4ede7;
-  --amber:#c98a2b; --amber-600:#a96f18; --amber-100:#fbf0dc;
+  --amber:#c98a2b; --amber-600:#946013; --amber-100:#fbf0dc;
   --cream:#faf7f0; --paper:#ffffff; --ink:#1b2620; --muted:#55635b; --line:#e3ded2;
   --radius:18px; --shadow:0 1px 2px rgba(15,42,31,.06),0 8px 28px rgba(15,42,31,.08);
   --serif:"Fraunces",Georgia,"Times New Roman",serif;
@@ -60,6 +60,12 @@ h1,h2,h3{font-family:var(--serif);color:var(--green-800);line-height:1.15;margin
 
 /* ---------- Nav ---------- */
 .topbar{height:5px;background:linear-gradient(90deg,var(--amber),#e3a33b,var(--amber))}
+.annbar{background:var(--green-900);color:#fff;font:500 14px/1.4 var(--sans);text-align:center;padding:9px 16px}
+.annbar b{color:#f2c46d;font-weight:700}
+.annbar a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px;white-space:nowrap;margin-left:6px}
+.annbar a:hover{color:#f2c46d}
+.annbar.done a{display:none}
+@media (max-width:520px){.annbar{font-size:13px;padding:8px 12px}}
 header.nav{position:-webkit-sticky;position:sticky;top:0;z-index:50;background:rgba(250,247,240,.97);border-bottom:1px solid transparent;transition:border-color .25s,box-shadow .25s}
 @media (min-width:901px){@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){header.nav{background:rgba(250,247,240,.86);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px)}}}
 header.nav.scrolled{border-color:var(--line);box-shadow:0 4px 20px rgba(15,42,31,.06)}
@@ -172,6 +178,13 @@ header.nav.scrolled{border-color:var(--line);box-shadow:0 4px 20px rgba(15,42,31
 .hv-steps{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,.14);font-size:14px;position:relative;z-index:1}
 .hv-steps span{display:inline-flex;align-items:center;gap:8px}
 .hv-steps i{font:700 13px/1 var(--serif);font-style:normal;width:22px;height:22px;border-radius:50%;background:rgba(227,163,59,.2);color:#e3a33b;display:grid;place-items:center;flex:none}
+.awline{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:8px;width:max-content;max-width:min(400px,calc(100vw - 32px));margin:64px auto 0;left:50%;transform:translateX(-50%);background:var(--paper);border:1.5px solid var(--amber);border-radius:999px;padding:8px 16px;color:var(--green-800);font:600 13.5px/1.35 var(--sans);text-decoration:none;box-shadow:var(--shadow);text-align:center}
+.awline svg{color:var(--amber-600);flex:none}
+.awline b{font-weight:800}
+.awline:hover{background:var(--amber-100)}
+@media (min-width:901px){.awline{position:absolute;top:100%;margin-top:44px;max-width:100%}}
+@media (min-width:1240px){.awline{max-width:none;white-space:nowrap}}
+@media (max-width:900px){.awline{margin-top:18px;font-size:13px}}
 @media (max-width:900px){.portrait{width:min(230px,62%)}.portrait .ring{width:80px;height:80px}.float{display:none}}
 @media (max-width:480px){.hv-steps{flex-direction:column;gap:6px}}
 @media (max-width:900px){.greet{margin-bottom:8px}.hero-grid{gap:20px}}
@@ -274,7 +287,7 @@ section.block{padding:72px 0}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s;position:relative}
 .step{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:28px;position:relative;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s}
 .step:hover{transform:translateY(-4px);box-shadow:0 2px 4px rgba(15,42,31,.06),0 18px 40px rgba(15,42,31,.12)}
-.step .num{font:700 54px/1 var(--serif);color:var(--amber);opacity:.9}
+.step .num{font:700 54px/1 var(--serif);color:#b07a22}
 .step .ico{position:absolute;right:24px;top:28px;width:48px;height:48px;border-radius:14px;background:var(--green-100);color:var(--green-800);display:grid;place-items:center}
 .step h3{font:700 20px var(--sans);color:var(--ink);margin:14px 0 6px}
 .step p{margin:0;color:var(--muted)}
@@ -396,12 +409,13 @@ footer{background:var(--green-900);color:#b8cdbf;padding:56px 0 28px;margin-top:
 }
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://dramitkr.github.io/#website","url":"https://dramitkr.github.io/","name":"Dr Amit Kumar","description":"Personal website of Dr Amit Kumar","inLanguage":"en-IN","publisher":{"@id":"https://dramitkr.github.io/#person"}},{"@type":"ProfilePage","@id":"https://dramitkr.github.io/#webpage","url":"https://dramitkr.github.io/","name":"Dr Amit Kumar | Candidate, IEEE India Council Chair-Elect 2027","description":"Personal website of Dr Amit Kumar, Senior Member IEEE, Hyderabad — candidate for IEEE India Council Chair-Elect 2027. Record, priorities and how to vote.","isPartOf":{"@id":"https://dramitkr.github.io/#website"},"about":{"@id":"https://dramitkr.github.io/#person"},"mainEntity":{"@id":"https://dramitkr.github.io/#person"},"primaryImageOfPage":{"@id":"https://dramitkr.github.io/#photo"},"datePublished":"2026-11-17","dateModified":"2026-11-17","inLanguage":"en-IN"},{"@type":"ImageObject","@id":"https://dramitkr.github.io/#photo","url":"https://dramitkr.github.io/assets/amit-kumar.jpg","contentUrl":"https://dramitkr.github.io/assets/amit-kumar.jpg","width":900,"height":977,"caption":"Dr Amit Kumar"},{"@type":"Person","@id":"https://dramitkr.github.io/#person","name":"Dr Amit Kumar","alternateName":["Amit Kumar","Dr. Amit Kumar"],"honorificPrefix":"Dr","url":"https://dramitkr.github.io/","image":{"@id":"https://dramitkr.github.io/#photo"},"description":"Forensic scientist, entrepreneur and engineer from Hyderabad; IEEE Senior Member and volunteer since 2010; candidate for IEEE India Council Chair-Elect 2027.","jobTitle":"Director","worksFor":{"@type":"Organization","name":"BioAxis DNA Research Centre (P) Ltd","address":{"@type":"PostalAddress","addressLocality":"Hyderabad","addressRegion":"Telangana","addressCountry":"IN"}},"knowsAbout":["DNA forensics","Bioinformatics","Genetic predisposition studies","Conference organization","Technical program integrity","Volunteer leadership"],"memberOf":{"@type":"OrganizationRole","roleName":"Senior Member","memberOf":{"@type":"Organization","name":"IEEE","url":"https://www.ieee.org/"}},"award":["IEEE MGA Leadership Award (2024)","IEEE Region 10 Outstanding Volunteer (2022)","IEEE MGA Achievement Award (2020)","IEEE India Council Outstanding Volunteer (2020)"],"email":"mailto:amitkr@ieee.org","telephone":"+91-98498-07824","address":{"@type":"PostalAddress","addressLocality":"Hyderabad","addressRegion":"Telangana","addressCountry":"IN"},"sameAs":["https://www.linkedin.com/in/dramitkumar/","https://www.facebook.com/dramitkumaar"]},{"@type":"FAQPage","@id":"https://dramitkr.github.io/#voting-help","isPartOf":{"@id":"https://dramitkr.github.io/#webpage"},"mainEntity":[{"@type":"Question","name":"When is the voting?","acceptedAnswer":{"@type":"Answer","text":"Voting for IEEE India Council Chair-Elect 2027 runs from 19 November to 8 December 2026. Check the ballot email for the exact closing time."}},{"@type":"Question","name":"How do I vote?","acceptedAnswer":{"@type":"Answer","text":"Go to voting.vtools.ieee.org, sign in with your IEEE account, open the IEEE India Council Chair-Elect 2027 ballot, make your choice and click Complete Ballot."}},{"@type":"Question","name":"I can’t find my ballot. What should I do?","acceptedAnswer":{"@type":"Answer","text":"Check spam, junk and promotions folders; search your inbox for vTools or IEEE India Council; make sure the email in your IEEE account at ieee.org is current; if it still has not arrived, contact the IEEE India Council through ieeeindiacouncil.org."}},{"@type":"Question","name":"I voted but I’m not sure it counted.","acceptedAnswer":{"@type":"Answer","text":"You must click Complete Ballot on the Confirm Vote page. If you see Vote Completed, your vote is recorded."}},{"@type":"Question","name":"Who is eligible to vote?","acceptedAnswer":{"@type":"Answer","text":"Members who joined IEEE, or renewed their membership, on or before 31 March 2026, in a Section of the IEEE India Council. Eligibility also depends on membership grade under the IEEE India Council election rules. Eligible members see the ballot automatically when signing in at voting.vtools.ieee.org."}},{"@type":"Question","name":"Is my vote private?","acceptedAnswer":{"@type":"Answer","text":"You vote directly on IEEE’s own platform. Candidates do not see how any individual member voted."}},{"@type":"Question","name":"Does this website collect my details or ask for my IEEE login?","acceptedAnswer":{"@type":"Answer","text":"No. This site has no forms, sets no cookies and never asks for IEEE credentials."}},{"@type":"Question","name":"How can I help?","acceptedAnswer":{"@type":"Answer","text":"Vote as soon as your ballot arrives and remind colleagues personally. Do not use IEEE mailing lists or official IEEE pages and groups to promote a candidate."}}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://dramitkr.github.io/#website","url":"https://dramitkr.github.io/","name":"Dr Amit Kumar","description":"Personal website of Dr Amit Kumar","inLanguage":"en-IN","publisher":{"@id":"https://dramitkr.github.io/#person"}},{"@type":"ProfilePage","@id":"https://dramitkr.github.io/#webpage","url":"https://dramitkr.github.io/","name":"Dr Amit Kumar | Candidate, IEEE India Council Chair-Elect 2027","description":"Personal website of Dr Amit Kumar, Senior Member IEEE, Hyderabad — candidate for IEEE India Council Chair-Elect 2027. Record, priorities and how to vote.","isPartOf":{"@id":"https://dramitkr.github.io/#website"},"about":{"@id":"https://dramitkr.github.io/#person"},"mainEntity":{"@id":"https://dramitkr.github.io/#person"},"primaryImageOfPage":{"@id":"https://dramitkr.github.io/#photo"},"datePublished":"2026-11-17","dateModified":"2026-11-18","inLanguage":"en-IN"},{"@type":"ImageObject","@id":"https://dramitkr.github.io/#photo","url":"https://dramitkr.github.io/assets/amit-kumar.jpg","contentUrl":"https://dramitkr.github.io/assets/amit-kumar.jpg","width":900,"height":977,"caption":"Dr Amit Kumar"},{"@type":"Person","@id":"https://dramitkr.github.io/#person","name":"Dr Amit Kumar","alternateName":["Amit Kumar","Dr. Amit Kumar"],"honorificPrefix":"Dr","url":"https://dramitkr.github.io/","image":{"@id":"https://dramitkr.github.io/#photo"},"description":"Forensic scientist, entrepreneur and engineer from Hyderabad; IEEE Senior Member and volunteer since 2010; candidate for IEEE India Council Chair-Elect 2027.","jobTitle":"Director","worksFor":{"@type":"Organization","name":"BioAxis DNA Research Centre (P) Ltd","address":{"@type":"PostalAddress","addressLocality":"Hyderabad","addressRegion":"Telangana","addressCountry":"IN"}},"knowsAbout":["DNA forensics","Bioinformatics","Genetic predisposition studies","Conference organization","Technical program integrity","Volunteer leadership"],"memberOf":{"@type":"OrganizationRole","roleName":"Senior Member","memberOf":{"@type":"Organization","name":"IEEE","url":"https://www.ieee.org/"}},"award":["IEEE MGA Leadership Award (2024)","IEEE Region 10 Outstanding Volunteer (2022)","IEEE MGA Achievement Award (2020)","IEEE India Council Outstanding Volunteer (2020)"],"email":"mailto:amitkr@ieee.org","telephone":"+91-98498-07824","address":{"@type":"PostalAddress","addressLocality":"Hyderabad","addressRegion":"Telangana","addressCountry":"IN"},"sameAs":["https://www.linkedin.com/in/dramitkumar/","https://www.facebook.com/dramitkumaar"]},{"@type":"FAQPage","@id":"https://dramitkr.github.io/#voting-help","isPartOf":{"@id":"https://dramitkr.github.io/#webpage"},"mainEntity":[{"@type":"Question","name":"When is the voting?","acceptedAnswer":{"@type":"Answer","text":"Voting for IEEE India Council Chair-Elect 2027 runs from 19 November to 8 December 2026. Check the ballot email for the exact closing time."}},{"@type":"Question","name":"How do I vote?","acceptedAnswer":{"@type":"Answer","text":"Go to voting.vtools.ieee.org, sign in with your IEEE account, open the IEEE India Council Chair-Elect 2027 ballot, make your choice and click Complete Ballot."}},{"@type":"Question","name":"I can’t find my ballot. What should I do?","acceptedAnswer":{"@type":"Answer","text":"Check spam, junk and promotions folders; search your inbox for vTools or IEEE India Council; sign in directly at voting.vtools.ieee.org, where the ballot appears under Ballots; if no ballot reaches you after 19 November, contact the IEEE India Council Nomination Committee through ieeeindiacouncil.org."}},{"@type":"Question","name":"I voted but I’m not sure it counted.","acceptedAnswer":{"@type":"Answer","text":"You must click Complete Ballot on the Confirm Vote page. If you see Vote Completed, your vote is recorded."}},{"@type":"Question","name":"Who is eligible to vote?","acceptedAnswer":{"@type":"Answer","text":"Members who joined IEEE, or renewed their membership, on or before 31 March 2026, in a Section of the IEEE India Council. Eligibility also depends on membership grade under the IEEE India Council election rules. Eligible members see the ballot automatically when signing in at voting.vtools.ieee.org."}},{"@type":"Question","name":"Is my vote private?","acceptedAnswer":{"@type":"Answer","text":"You vote directly on IEEE’s own platform. Candidates do not see how any individual member voted."}},{"@type":"Question","name":"Does this website collect my details or ask for my IEEE login?","acceptedAnswer":{"@type":"Answer","text":"No. This site has no forms, sets no cookies and never asks for IEEE credentials."}},{"@type":"Question","name":"How can I help?","acceptedAnswer":{"@type":"Answer","text":"Vote as soon as your ballot arrives and remind colleagues personally. Do not use IEEE mailing lists or official IEEE pages and groups to promote a candidate."}}]}]}</script>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <noscript><link rel="stylesheet" href="assets/fonts/greetings.css"></noscript>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="annbar" id="annbar" role="region" aria-label="Voting dates"><span id="ann-txt">Voting is open <b>19 November – 8 December 2026</b> · check your IEEE email</span><a href="https://voting.vtools.ieee.org/" target="_blank" rel="noopener" id="ann-cta">Vote now ↗</a></div>
 <div class="topbar" aria-hidden="true"></div>
 
 <header class="nav" id="nav">
@@ -459,6 +473,7 @@ footer{background:var(--green-900);color:#b8cdbf;padding:56px 0 28px;margin-top:
         <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></span>
         <span><b>MGA Leadership</b>Award 2024</span>
       </div>
+      <!-- HEROAWARDS:START --><a class="awline" href="#awards"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5L17 22l-5-3-5 3 1.5-8.5"/></svg><span><b>4 IEEE volunteer awards</b> · MGA ×2 · Region 10 · India Council →</span></a><!-- HEROAWARDS:END -->
     </div>
   </div>
 </section>
@@ -529,7 +544,7 @@ footer{background:var(--green-900);color:#b8cdbf;padding:56px 0 28px;margin-top:
     </ol>
     <div class="notice reveal" role="note">
       <span class="tag">PLEASE NOTE</span>
-      <p style="margin:0">Voting is open <strong>19 November – 8 December 2026</strong> on the <strong>IEEE vTools Voting</strong> platform. Vote only at the official address <a href="https://voting.vtools.ieee.org/" target="_blank" rel="noopener">voting.vtools.ieee.org</a>. A ballot email is also sent to <strong>the address registered with your IEEE membership</strong>; check it for the exact closing time. If that address has changed, kindly update it at <a href="https://www.ieee.org/" target="_blank" rel="noopener">ieee.org</a> so that your ballot reaches you. This site never asks for your IEEE credentials. Can’t find your ballot? <a href="#voting-help">See voting help</a>.</p>
+      <p style="margin:0">Voting is open <strong>19 November – 8 December 2026</strong> on the <strong>IEEE vTools Voting</strong> platform. Vote only at the official address <a href="https://voting.vtools.ieee.org/" target="_blank" rel="noopener">voting.vtools.ieee.org</a>. A ballot email is also sent to <strong>the address registered with your IEEE membership</strong>; check it for the exact closing time. Please check now that this is an address you actually read. If no ballot reaches you after 19 November, contact the <strong>IEEE India Council Nomination Committee</strong> through <a href="https://ieeeindiacouncil.org/" target="_blank" rel="noopener">ieeeindiacouncil.org</a>. This site never asks for your IEEE credentials. Can’t find your ballot? <a href="#voting-help">See voting help</a>.</p>
     </div>
   </div>
 </section>
@@ -545,7 +560,7 @@ footer{background:var(--green-900);color:#b8cdbf;padding:56px 0 28px;margin-top:
     <div class="faq">
       <details class="reveal"><summary>When is the voting?</summary><div class="ans">Voting for IEEE India Council Chair-Elect 2027 runs from <strong>19 November to 8 December 2026</strong>. Check the ballot email for the exact closing time.</div></details>
       <details class="reveal"><summary>How do I vote?</summary><div class="ans">Go to <a href="https://voting.vtools.ieee.org/" target="_blank" rel="noopener">voting.vtools.ieee.org</a>, sign in with your IEEE account, open the IEEE India Council Chair-Elect 2027 ballot, make your choice, and click <strong>Complete Ballot</strong>. You’ll also receive a ballot email from IEEE vTools Voting with a direct link. <a href="#vote">See the step-by-step guide</a>.</div></details>
-      <details class="reveal" open><summary>I can’t find my ballot. What should I do?</summary><div class="ans"><ol><li>You don’t need the email — sign in directly at <a href="https://voting.vtools.ieee.org/" target="_blank" rel="noopener">voting.vtools.ieee.org</a>; your ballot appears under <strong>Ballots</strong>.</li><li>Check your <strong>spam, junk and promotions</strong> folders.</li><li>Search your inbox for <strong>“vTools”</strong> or <strong>“IEEE India Council”</strong>.</li><li>Make sure the email address in your IEEE account is current — sign in at <a href="https://www.ieee.org/" target="_blank" rel="noopener">ieee.org</a> and check your account settings.</li><li>If it still hasn’t arrived, contact the IEEE India Council through its official website, <a href="https://ieeeindiacouncil.org/" target="_blank" rel="noopener">ieeeindiacouncil.org</a>.</li></ol></div></details>
+      <details class="reveal" open><summary>I can’t find my ballot. What should I do?</summary><div class="ans"><ol><li>You don’t need the email — sign in directly at <a href="https://voting.vtools.ieee.org/" target="_blank" rel="noopener">voting.vtools.ieee.org</a>; your ballot appears under <strong>Ballots</strong>.</li><li>Check your <strong>spam, junk and promotions</strong> folders.</li><li>Search your inbox for <strong>“vTools”</strong> or <strong>“IEEE India Council”</strong>.</li><li>Check which email address is registered with your IEEE membership (sign in at <a href="https://www.ieee.org/" target="_blank" rel="noopener">ieee.org</a>). Changing it now may not take effect in time for this election, so rely on step 1 above.</li><li>If no ballot reaches you after 19 November, contact the <strong>IEEE India Council Nomination Committee</strong> through the official website, <a href="https://ieeeindiacouncil.org/" target="_blank" rel="noopener">ieeeindiacouncil.org</a>.</li></ol></div></details>
       <details class="reveal"><summary>I voted but I’m not sure it counted.</summary><div class="ans">After choosing, you must click <strong>Complete Ballot</strong> on the Confirm Vote page. If you see <strong>Vote Completed</strong>, your vote is recorded. If not, sign in again at <a href="https://voting.vtools.ieee.org/" target="_blank" rel="noopener">voting.vtools.ieee.org</a> and finish the ballot.</div></details>
       <details class="reveal"><summary>Who is eligible to vote?</summary><div class="ans">You must have been an IEEE member <strong>on or before 31 March 2026</strong>, or have <strong>renewed your membership on or before 31 March 2026</strong>, in a Section of the IEEE India Council. Eligibility also depends on your membership grade, as set by the IEEE India Council election rules. If you are eligible, your ballot appears automatically when you sign in at <a href="https://voting.vtools.ieee.org/" target="_blank" rel="noopener">voting.vtools.ieee.org</a> — you don’t need to register. For questions about eligibility, please contact the IEEE India Council.</div></details>
       <details class="reveal"><summary>Is my vote private?</summary><div class="ans">You vote directly on IEEE’s own platform. Candidates, including me, do not see how any individual member voted.</div></details>
@@ -568,10 +583,10 @@ footer{background:var(--green-900);color:#b8cdbf;padding:56px 0 28px;margin-top:
 
 <div class="wrap">
   <div class="stats reveal" role="list">
-    <div class="stat" role="listitem"><div class="n" data-count="16" data-suffix="+">0</div><p>Years of IEEE volunteering, from Section webmaster in 2010 onward</p></div>
-    <div class="stat" role="listitem"><div class="n" data-count="3">0</div><p>IEEE-wide committees chaired — TPIC, Conference Tools, Conference Organization Integrity</p></div>
-    <div class="stat" role="listitem"><div class="n" data-count="3">0</div><p>Flagship conferences chaired — INDICON 2024, R10 HTC 2022, R10 SC Symposium 2024</p></div>
-    <div class="stat" role="listitem"><div class="n" data-count="4">0</div><p>Volunteer awards from IEEE MGA, Region 10 and India Council</p></div>
+    <div class="stat" role="listitem"><div class="n" data-count="16" data-suffix="+">16+</div><p>Years of IEEE volunteering, from Section webmaster in 2010 onward</p></div>
+    <div class="stat" role="listitem"><div class="n" data-count="3">3</div><p>IEEE-wide committees chaired — TPIC, Conference Tools, Conference Organization Integrity</p></div>
+    <div class="stat" role="listitem"><div class="n" data-count="3">3</div><p>Flagship conferences chaired — INDICON 2024, R10 HTC 2022, R10 SC Symposium 2024</p></div>
+    <div class="stat" role="listitem"><div class="n" id="stat-awards" data-count="4">4</div><p>Volunteer awards from IEEE MGA, Region 10 and India Council</p></div>
   </div>
 </div>
 
@@ -584,6 +599,7 @@ footer{background:var(--green-900);color:#b8cdbf;padding:56px 0 28px;margin-top:
       <p>Every office in the Hyderabad Section, then India Council, Region 10 and IEEE-wide committees — building chapters, running conferences and protecting their integrity.</p>
     </div>
 
+    <!-- POSITIONS:START (generated from data/positions.json) -->
     <div class="tabs" role="tablist" aria-label="Positions by level">
       <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="true">IEEE-wide · current<span class="c">8</span></button>
       <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">IEEE-wide · past<span class="c">9</span></button>
@@ -634,13 +650,17 @@ footer{background:var(--green-900);color:#b8cdbf;padding:56px 0 28px;margin-top:
       <div class="role"><span class="pip"></span><div><b>Webmaster · vTools Coordinator · R&amp;D Policy</b><span>IEEE Hyderabad Section</span><em class="when">2010 – 2013</em></div></div>
     </div>
 
-    <div class="awards">
+    <!-- POSITIONS:END -->
+
+    <div class="awards" id="awards">
       <h3 class="reveal">Awards &amp; recognition</h3>
       <div class="award-grid">
+        <!-- AWARDS:START -->
         <div class="award reveal"><div class="yr">2024</div><p>IEEE MGA Leadership Award<small>Member &amp; Geographic Activities</small></p></div>
         <div class="award reveal"><div class="yr">2022</div><p>Region 10 Outstanding Volunteer<small>IEEE Asia-Pacific</small></p></div>
         <div class="award reveal"><div class="yr">2020</div><p>IEEE MGA Achievement Award<small>Member &amp; Geographic Activities</small></p></div>
         <div class="award reveal"><div class="yr">2020</div><p>India Council Outstanding Volunteer<small>IEEE India Council</small></p></div>
+        <!-- AWARDS:END -->
       </div>
     </div>
   </div>
@@ -842,7 +862,7 @@ footer{background:var(--green-900);color:#b8cdbf;padding:56px 0 28px;margin-top:
   if('IntersectionObserver' in window){
     const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('[data-count]').forEach(count);io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
     $$('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4)*80+'ms';io.observe(el)});
-  } else { $$('.reveal').forEach(el=>el.classList.add('in')); $('[data-count]').forEach(el=>el.textContent=el.dataset.count+(el.dataset.suffix||'')); }
+  } else { $$('.reveal').forEach(el=>el.classList.add('in'));  }
 
   // Voting status (dates per IEEE India Council slate notice; IST)
   (function(){
@@ -851,6 +871,11 @@ footer{background:var(--green-900);color:#b8cdbf;padding:56px 0 28px;margin-top:
     if(now<open){const d=Math.ceil((open-now)/day);t.textContent='Voting opens 19 Nov 2026';sub.textContent=d===1?'Tomorrow · on IEEE vTools Voting':d+' days to go · on IEEE vTools Voting';}
     else if(now<=close){const d=Math.ceil((close-now)/day);el.classList.add('open');t.textContent='Voting is open now';sub.textContent='Closes 8 Dec 2026 · '+(d<=1?'last day':d+' days left')+' · check your inbox';}
     else{t.textContent='Voting closed on 8 Dec 2026';sub.textContent='Thank you to everyone who voted';}
+    // Top banner: countdown before/while open, thank-you line from 9 Dec
+    const ab=$('#annbar'), at=$('#ann-txt');
+    if(now<open){const d=Math.ceil((open-now)/day);at.innerHTML='Voting opens <b>'+(d===1?'tomorrow, 19 November':'19 November · '+d+' days to go')+'</b> · runs until 8 December 2026';const c=$('#ann-cta');c.textContent='How to vote →';c.href='#vote';c.removeAttribute('target');}
+    else if(now<=close){const d=Math.ceil((close-now)/day);at.innerHTML='Voting is open until <b>8 December</b>'+(d<=1?' · <b>today is the last day</b>':' · <b>'+d+' days left</b>')+' · check your IEEE email';}
+    else{ab.classList.add('done');at.innerHTML='<b>Thank you</b> to every member who voted in the IEEE India Council Chair-Elect 2027 election.';}
     $('#cal').href='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent('Vote: IEEE India Council Chair-Elect 2027')+'&dates=20261119T043000Z/20261119T050000Z&details='+encodeURIComponent('Voting runs 19 Nov to 8 Dec 2026 on IEEE vTools Voting. Look for the ballot email at your IEEE-registered address (check spam). '+location.href.split('#')[0]);
   })();
 

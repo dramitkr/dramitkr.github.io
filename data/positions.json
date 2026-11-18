@@ -1,0 +1,72 @@
+{
+  "_readme": "Single source of truth for positions and awards. Edit here, then run: node tools/build-positions.js (from the site folder). It rewrites the Record tabs, the Awards grid, the hero awards line and the award list in the JSON-LD of index.html, plus the 'Proof, not promises' and awards boxes of ../poster/flyer.html and ../poster/flyer-status.html. 'flyer' = line number on the flyer; roles sharing a line number are merged into one line.",
+  "groups": [
+    {
+      "id": "p1",
+      "tab": "IEEE-wide · current",
+      "roles": [
+        { "role": "Chair", "org": "Technical Program Integrity Committee (TPIC), IEEE Conferences Committee", "when": "2025 – present", "hl": true, "flyer": 1, "short": "IEEE Technical Program Integrity Committee" },
+        { "role": "Chair", "org": "Conference Tools Committee, IEEE Conferences Committee", "when": "2026 – present", "hl": true, "flyer": 2, "short": "IEEE Conference Tools Committee" },
+        { "role": "Member", "org": "IEEE Conferences Committee · Technical Activities Board appointment", "when": "2026 – 2027" },
+        { "role": "Member", "org": "Conference Publications Committee · MGA appointment", "when": "2025 – 2026" },
+        { "role": "Member, as TPIC Chair", "org": "Conference Quality Committee", "when": "2025 – present" },
+        { "role": "Member", "org": "Conference Organization Integrity Committee", "when": "2025 – present" },
+        { "role": "Corresponding Member", "org": "Conference Application Review Committee", "when": "2025 – present" },
+        { "role": "Member", "org": "Service Awards Committee", "when": "2026 – 2027" }
+      ]
+    },
+    {
+      "id": "p2",
+      "tab": "IEEE-wide · past",
+      "roles": [
+        { "role": "Chair", "org": "Conference Organization Integrity Committee, IEEE Conferences Committee", "when": "2023 – 2024", "hl": true, "flyer": 3, "short": "IEEE Conference Organization Integrity Committee" },
+        { "role": "Member", "org": "Technical Program Integrity Committee", "when": "2023 – 2024" },
+        { "role": "Member", "org": "Conference Quality Committee", "when": "2023 – 2025" },
+        { "role": "Member", "org": "Conference Organization Integrity Committee", "when": "2022" },
+        { "role": "Member", "org": "IEEE New Initiatives Committee", "when": "2024 – 2025" },
+        { "role": "Member", "org": "Eric Herz Outstanding Staff Member Award Committee", "when": "2023 – 2026" },
+        { "role": "Member", "org": "MGA Nominations & Appointments Committee", "when": "2020 – 2021" },
+        { "role": "Member", "org": "MGA Strategic Planning Committee", "when": "2017 – 2018" },
+        { "role": "Member", "org": "IEEE Corporate Engagement Ad Hoc Committee", "when": "2013" }
+      ]
+    },
+    {
+      "id": "p3",
+      "tab": "Region 10 & India Council",
+      "roles": [
+        { "role": "Chair", "org": "Section & Chapter Committee, IEEE Region 10 (Asia-Pacific)", "when": "2021 – 2024", "hl": true, "flyer": 4, "short": "Region 10 Section & Chapter Committee" },
+        { "role": "Conference Chair", "org": "IEEE INDICON 2024, the India Council’s flagship conference", "when": "2024", "hl": true, "flyer": 5, "short": "INDICON 2024" },
+        { "role": "Conference Chair", "org": "2022 IEEE Region 10 Humanitarian Technology Conference (R10 HTC)", "when": "2021 – 2022", "flyer": 5, "short": "R10 HTC 2022" },
+        { "role": "Conference Chair", "org": "2024 IEEE Region 10 Section Chapter Symposium", "when": "2024", "flyer": 5, "short": "R10 SC Symposium 2024" },
+        { "role": "Lead organiser", "org": "R10 Conference Leadership Workshop", "when": "" },
+        { "role": "Professional Activities", "org": "IEEE India Council", "when": "2015 – 2016" },
+        { "role": "Technical Activities", "org": "IEEE India Council", "when": "2015 – 2016" },
+        { "role": "Member", "org": "IEEE India Council Conference Committee", "when": "" }
+      ]
+    },
+    {
+      "id": "p4",
+      "tab": "Hyderabad Section",
+      "roles": [
+        { "role": "Chair", "org": "IEEE Hyderabad Section", "when": "2020", "hl": true },
+        { "role": "Vice Chair", "org": "IEEE Hyderabad Section", "when": "2018 – 2019" },
+        { "role": "Treasurer", "org": "IEEE Hyderabad Section", "when": "2013 – 2016" },
+        { "role": "Secretary", "org": "IEEE Hyderabad Section", "when": "2011 – 2013" },
+        { "role": "Conferences Committee Chair", "org": "IEEE Hyderabad Section", "when": "2018 – 2019 · 2023 – 2024" },
+        { "role": "India Council Representative", "org": "IEEE Hyderabad Section", "when": "2019 · 2022 – 2023" },
+        { "role": "Founding Chapter Chair", "org": "IEEE Sensors Council Chapter, Hyderabad Section", "when": "2021 – 2023", "flyer": 6, "short": "Sensors Council" },
+        { "role": "Founding Chapter Chair", "org": "IEEE Computational Intelligence Society Chapter, Hyderabad Section", "when": "2011 – 2014", "flyer": 6, "short": "CIS" },
+        { "role": "Webmaster · vTools Coordinator · R&D Policy", "org": "IEEE Hyderabad Section", "when": "2010 – 2013" }
+      ]
+    }
+  ],
+  "flyerLines": {
+    "6": { "role": "Founding Chapter Chair", "suffix": " chapters, Hyderabad" }
+  },
+  "awards": [
+    { "year": "2024", "name": "IEEE MGA Leadership Award", "by": "Member & Geographic Activities", "flyer": "IEEE MGA Leadership Award", "hero": "MGA" },
+    { "year": "2022", "name": "Region 10 Outstanding Volunteer", "schema": "IEEE Region 10 Outstanding Volunteer", "by": "IEEE Asia-Pacific", "hero": "Region 10" },
+    { "year": "2020", "name": "IEEE MGA Achievement Award", "by": "Member & Geographic Activities", "hero": "MGA" },
+    { "year": "2020", "name": "India Council Outstanding Volunteer", "schema": "IEEE India Council Outstanding Volunteer", "by": "IEEE India Council", "hero": "India Council" }
+  ]
+}
