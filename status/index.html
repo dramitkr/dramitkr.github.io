@@ -25,7 +25,9 @@
 <meta name="theme-color" content="#173a2c">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../favicon.ico" sizes="any">
-<link rel="preload" as="image" href="../assets/posters/view-status.jpg">
+<link rel="preload" as="image" type="image/webp" imagesrcset="../assets/posters/view-status-720.webp 720w, ../assets/posters/view-status-1080.webp 1080w" imagesizes="(max-width:820px) calc(100vw - 56px), 524px" fetchpriority="high">
+<link rel="preload" href="../assets/fonts/f3.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/f5.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 @font-face{font-family:Fraunces;font-style:normal;font-weight:500 700;font-display:swap;src:url(../assets/fonts/f3.woff2) format('woff2')}
 @font-face{font-family:Fraunces;font-style:italic;font-weight:600;font-display:swap;src:url(../assets/fonts/f1.woff2) format('woff2')}
@@ -73,7 +75,7 @@ footer a{color:#e3a33b}
 <div class="wrap">
   <a class="brand" href="../"><span class="mono" aria-hidden="true">AK</span><span><b>Dr Amit Kumar</b><small>Candidate · IEEE India Council Chair-Elect 2027</small></span></a>
   <main class="grid">
-    <div class="shot"><img src="../assets/posters/view-status.jpg" width="1080" height="1920" alt="Full-screen WhatsApp status poster from Dr Amit Kumar with the voting dates, steps and a QR code" fetchpriority="high"></div>
+    <div class="shot"><picture><source type="image/webp" srcset="../assets/posters/view-status-720.webp 720w, ../assets/posters/view-status-1080.webp 1080w" sizes="(max-width:820px) calc(100vw - 56px), 524px"><img src="../assets/posters/view-status.jpg" width="1080" height="1920" alt="Full-screen WhatsApp status poster from Dr Amit Kumar with the voting dates, steps and a QR code" fetchpriority="high" decoding="async"></picture></div>
     <div>
       <div class="kick">For WhatsApp status</div>
       <h1>Thank <em>you.</em><br>Now, please vote.</h1>
