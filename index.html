@@ -878,14 +878,17 @@ footer{background:var(--green-900);color:#b8cdbf;padding:56px 0 28px;margin-top:
 
   // Voting status (dates per IEEE India Council slate notice; IST)
   (function(){
-    const open=new Date('2026-11-19T00:00:00+05:30'), close=new Date('2026-12-08T23:59:59+05:30'), now=new Date();
+    const open=new Date('2026-11-18T23:59:00+05:30'), close=new Date('2026-12-08T23:59:59+05:30'), now=new Date();
+    const tonight=new Date(now.getTime()+198e5).toISOString().slice(0,10)==='2026-11-18';
     const day=864e5, el=$('#vstatus'), t=$('#vs-title'), sub=$('#vs-sub');
-    if(now<open){const d=Math.ceil((open-now)/day);t.textContent='Voting opens 19 Nov 2026';sub.textContent=d===1?'Tomorrow · on IEEE vTools Voting':d+' days to go · on IEEE vTools Voting';}
+    if(now<open&&tonight){t.textContent='Voting opens tonight';sub.textContent='11:59 pm IST · on IEEE vTools Voting';}
+    else if(now<open){const d=Math.ceil((open-now)/day);t.textContent='Voting opens 19 Nov 2026';sub.textContent=d===1?'Tomorrow · on IEEE vTools Voting':d+' days to go · on IEEE vTools Voting';}
     else if(now<=close){const d=Math.ceil((close-now)/day);el.classList.add('open');t.textContent='Voting is open now';sub.textContent='Closes 8 Dec 2026 · '+(d<=1?'last day':d+' days left')+' · check your inbox';}
     else{t.textContent='Voting closed on 8 Dec 2026';sub.textContent='Thank you to everyone who voted';}
     // Top banner: countdown before/while open, thank-you line from 9 Dec
     const ab=$('#annbar'), at=$('#ann-txt');
-    if(now<open){const d=Math.ceil((open-now)/day);at.innerHTML='Voting opens <b>'+(d===1?'tomorrow, 19 November':'19 November · '+d+' days to go')+'</b> · runs until 8 December 2026';const c=$('#ann-cta');c.textContent='How to vote →';c.href='#vote';c.removeAttribute('target');}
+    if(now<open&&tonight){at.innerHTML='Voting opens <b>tonight at 11:59 pm IST</b> · runs until 8 December 2026';const c=$('#ann-cta');c.textContent='How to vote →';c.href='#vote';c.removeAttribute('target');}
+    else if(now<open){const d=Math.ceil((open-now)/day);at.innerHTML='Voting opens <b>'+(d===1?'tomorrow, 19 November':'19 November · '+d+' days to go')+'</b> · runs until 8 December 2026';const c=$('#ann-cta');c.textContent='How to vote →';c.href='#vote';c.removeAttribute('target');}
     else if(now<=close){const d=Math.ceil((close-now)/day);at.innerHTML='Voting is open until <b>8 December</b>'+(d<=1?' · <b>today is the last day</b>':' · <b>'+d+' days left</b>')+' · check your IEEE email';}
     else{ab.classList.add('done');at.innerHTML='<b>Thank you</b> to every member who voted in the IEEE India Council Chair-Elect 2027 election.';}
     $('#cal').href='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent('Vote: IEEE India Council Chair-Elect 2027')+'&dates=20261119T043000Z/20261119T050000Z&details='+encodeURIComponent('Voting runs 19 Nov to 8 Dec 2026 on IEEE vTools Voting. Look for the ballot email at your IEEE-registered address (check spam). '+location.href.split('#')[0]);
