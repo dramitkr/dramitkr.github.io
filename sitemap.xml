@@ -12,4 +12,39 @@
     <image:image><image:loc>https://dramitkr.github.io/assets/posters/amit-kumar-linkedin-facebook.png</image:loc><image:title>Dr Amit Kumar thank-you and voting poster for LinkedIn and Facebook</image:title></image:image>
     <image:image><image:loc>https://dramitkr.github.io/assets/posters/amit-kumar-flyer.png</image:loc><image:title>Dr Amit Kumar one-page flyer</image:title></image:image>
   </url>
+  <url>
+    <loc>https://dramitkr.github.io/flyer/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image><image:loc>https://dramitkr.github.io/assets/posters/view-flyer.jpg</image:loc><image:title>One-page flyer of Dr Amit Kumar, candidate for IEEE India Council Chair-Elect 2027: volunteer ladder, priorities by member, record, awards and how to vote</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://dramitkr.github.io/poster/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image><image:loc>https://dramitkr.github.io/assets/posters/view-poster.jpg</image:loc><image:title>Thank-you poster from Dr Amit Kumar with the voting dates, three steps to vote and a QR code</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://dramitkr.github.io/status/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image><image:loc>https://dramitkr.github.io/assets/posters/view-status.jpg</image:loc><image:title>Full-screen WhatsApp status poster from Dr Amit Kumar with the voting dates, steps and a QR code</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://dramitkr.github.io/have-you-voted/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image><image:loc>https://dramitkr.github.io/assets/posters/view-have-you-voted.jpg</image:loc><image:title>Reminder poster: Have you voted? Your ballot is waiting from IEEE vTools Voting. Dr Amit Kumar, candidate for IEEE India Council Chair-Elect 2027</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://dramitkr.github.io/last-call/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image><image:loc>https://dramitkr.github.io/assets/posters/view-last-call.jpg</image:loc><image:title>Reminder poster: Last call. Voting closes on 8 December. Dr Amit Kumar, candidate for IEEE India Council Chair-Elect 2027</image:title></image:image>
+  </url>
 </urlset>
