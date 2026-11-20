@@ -34,6 +34,13 @@
     <image:image><image:loc>https://dramitkr.github.io/assets/posters/view-status.jpg</image:loc><image:title>Full-screen WhatsApp status poster from Dr Amit Kumar with the voting dates, steps and a QR code</image:title></image:image>
   </url>
   <url>
+    <loc>https://dramitkr.github.io/how-to-vote/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://dramitkr.github.io/assets/posters/view-how-to-vote.jpg</image:loc><image:title>Step-by-step guide to voting for Dr Amit Kumar on voting.vtools.ieee.org</image:title></image:image>
+  </url>
+  <url>
     <loc>https://dramitkr.github.io/have-you-voted/</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
